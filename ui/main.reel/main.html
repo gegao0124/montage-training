@@ -35,7 +35,14 @@
             "properties": {
                 "element": {"#": "observableButton"},
                 "enabled": true,
-                "label": "Button"
+                "label": "Save"
+            }
+        },
+        "textValueInput": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "textValueInput"},
+                "value": "Text"
             }
         }
     }
@@ -43,6 +50,7 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <p data-montage-id="textValueInput"></p>
         <button data-montage-id="observableButton"></button>
     </div>
 </body>
