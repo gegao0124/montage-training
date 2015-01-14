@@ -10,7 +10,9 @@
     {
         "owner": {
             "properties": {
-                "element": {"#": "main"}
+                "element": {"#": "main"},
+                "delayedValue": "delayed",
+                "realtimeValue": "realtime"
             },
             "listeners": [
                 {
@@ -30,6 +32,13 @@
                 "isHidden": true
             }
         },
+        "delayedText": {
+            "prototype": "digit/ui/text.reel",
+            "properties": {
+                "element": {"#": "delayedText"},
+                "value": "Text"
+            }
+        },
         "observableButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -42,13 +51,6 @@
             "prototype": "montage/ui/text.reel",
             "properties": {
                 "element": {"#": "realtimeText"},
-                "value": "Text"
-            }
-        },
-        "text": {
-            "prototype": "digit/ui/text.reel",
-            "properties": {
-                "element": {"#": "text"},
                 "value": "Text"
             }
         },
@@ -67,7 +69,7 @@
         <input data-montage-id="textValueInput" type="text">
         <button data-montage-id="observableButton"></button>
         <p data-montage-id="realtimeText"></p>
-        <p data-montage-id="text"></p>
+        <p data-montage-id="delayedText"></p>
     </div>
 </body>
 </html>

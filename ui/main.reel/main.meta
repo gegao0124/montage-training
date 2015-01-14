@@ -10,13 +10,34 @@
       }
     }
   },
+  "blueprint_unnamed_delayedValue": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "delayedValue",
+      "blueprint": {"@": "root"}
+    }
+  },
+  "blueprint_unnamed_realtimeValue": {
+    "prototype": "montage/core/meta/property-blueprint",
+    "properties": {
+      "name": "realtimeValue",
+      "blueprint": {"@": "root"}
+    }
+  },
   "root": {
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
       "parent": {"@": "blueprint_component_reference"},
+      "propertyBlueprints": [
+        {"@": "blueprint_unnamed_delayedValue"},
+        {"@": "blueprint_unnamed_realtimeValue"}
+      ],
       "propertyBlueprintGroups": {
-        "Main": []
+        "Main": [
+          {"@": "blueprint_unnamed_delayedValue"},
+          {"@": "blueprint_unnamed_realtimeValue"}
+        ]
       },
       "module": {
         "%": "ui/main.reel"
